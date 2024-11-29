@@ -1,0 +1,6 @@
+import("//build/ohos.gni")
+group("test_sample"){
+    deps=[
+        "buzzer:buzzer_test",
+    ]
+}

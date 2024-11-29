@@ -1,0 +1,36 @@
+{
+    "name":"@ohos/test_sample",
+    "description":"my sample",
+    "version":"4.0",
+    "license":"Apache license 2.0",
+    "publishAs":"code-segment",
+    "segment":{
+        "destPath":""
+    },
+    "dirs":{},
+    "scripts":{},
+    "component":{
+        "name":"test_sample",
+        "subsystem":"my_sample",
+        "syscap":[],
+        "features":[],
+        "adapted_system_type":["mini","small","standard"],
+        "rom":"10KB",
+        "ram":"10KB",
+        "deps":{
+            "components":[
+                "c_utils",
+                "hilog",
+                "napi"
+            ],
+            "third_party":[]
+        },
+        "build":{
+            "sub_component":[
+                "//my_sample/test_sample:test_sample"
+            ],
+            "inner_kits":[],
+            "test":[]
+        }
+    }
+}

@@ -1,0 +1,27 @@
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+
+ohos_executable("buzzer_test"){
+    sources=[
+        "src/buzzer.c"
+    ]
+    include_dirs=[
+        "include",
+        "//commonlibrary/c_utils/base/include",
+        "//device/soc/hisilicon/hi3861v100/sdk_liteos/include",
+        "//commonlibrary/utils_lite/include",
+        "//base/iothardware/peripheral/interfaces/inner_api",
+        "//device/board/bearpi/bearpi_hm_nano/iot_hardware_hals/include",
+        "//device/soc/hisilicon/hi3861v100/hi3861_adapter/kal/cmsis",
+        "//device/soc/hisilicon/common/platform/wifi/hi3881v100/driver/include",
+        "//third_party/musl/ndk_musl_include/unistd.h"
+    ]
+
+    external_deps=[
+        "c_utils:utils",
+        "hilog:libhilog",
+    ]
+    install_images=["system"]
+    install_enable=true
+    part_name="test_sample"
+}
